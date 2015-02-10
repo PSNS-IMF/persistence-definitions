@@ -5,8 +5,10 @@
     <title>PSNS Common Persistence Interface Definitions</title>
     <authors>Jeff Purcell</authors>
     <owners>109.14</owners>
-    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <description>Contains interfaces that define persistence-specific functionality</description>
+    <projectUrl>https://github.com/PSNS-IMF/persistence-definitions</projectUrl>
+    <licenseUrl>https://github.com/PSNS-IMF/persistence-definitions/blob/master/License</licenseUrl>
     <releaseNotes>
       ## 1.0.0.7
       ### Features
@@ -42,7 +44,7 @@
       * Initial Release
     </releaseNotes>
     <copyright>Copyright 2015</copyright>
-    <version>1.0.0.7</version>
+    <version>$version$</version>
     <dependencies>
       <dependency id="Ninject" version="3.2.2.0" />
     </dependencies>
