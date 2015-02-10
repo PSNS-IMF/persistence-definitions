@@ -50,7 +50,7 @@
     </dependencies>
   </metadata>
   <files>
-    <file src="Definitions\bin\$configuration$\Psns.Common.Persistence.Definitions.dll" target="lib\net40\" />
-    <file src="Definitions\bin\$configuration$\Psns.Common.Persistence.Definitions.xml" target="lib\net40\" />
+    <file src="..\bin\$configuration$\Psns.Common.Persistence.Definitions.dll" target="lib\net40\" />
+    <file src="..\bin\$configuration$\Psns.Common.Persistence.Definitions.xml" target="lib\net40\" />
   </files>
 </package>
