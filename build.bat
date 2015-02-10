@@ -21,4 +21,4 @@ mkdir Build\lib
 mkdir Build\lib\net40
 
 set namespace=Psns.Common.Persistence.Definitions
-%nuget% pack "src\%namespace%\%namespace%.nuspec" -NoPackageAnalysis -verbosity detailed -o Build -Version %version% -p Configuration="%config%"
+%nuget% pack "src\%namespace%\nuget\%namespace%.nuspec" -NoPackageAnalysis -verbosity detailed -o Build -Version %version% -p Configuration="%config%"
