@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>Psns.Common.Persistence.Definitions</id>
+    <title>PSNS Common Persistence Interface Definitions</title>
+    <authors>Jeff Purcell</authors>
+    <owners>109.14</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Contains interfaces that define persistence-specific functionality</description>
+    <releaseNotes>
+      ## 1.0.0.7
+      ### Features
+      * Moved IIdentifiable interface into module from Crudified.
+
+      ## 1.0.0.6
+      ### Features
+      * Updating IRepository Find to work with EF properly
+
+      ## 1.0.0.5
+      ### Features
+      * Added IncludePropertyAttribute to declare when includes should be used with IRepository
+
+      ## 1.0.0.4
+      ### Features
+      * Added a Create method to IRepository
+
+      ## 1.0.0.3
+      ### Features
+      * Added a Ninject Module for binding the RepositoryFactory
+
+      ## 1.0.0.2
+      ### Features
+      * Add SaveChanges to IRepository
+      * Change IRepository.Delete to return the object deleted
+
+      ## 1.0.0.1
+      ### Features
+      * Updated IRepository to all for finding by primary keys
+
+      ## 1.0.0.0
+      ### Features
+      * Initial Release
+    </releaseNotes>
+    <copyright>Copyright 2015</copyright>
+    <version>1.0.0.7</version>
+    <dependencies>
+      <dependency id="Ninject" version="3.2.2.0" />
+    </dependencies>
+  </metadata>
+</package>
