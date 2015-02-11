@@ -1,6 +1,6 @@
 @echo Off
 
-%MsBuildExe% MyGetBuild.proj /p:Configuration="%Configuration%" /m /v:M /fl /flp:LogFile=msbuild.log;Verbosity=diag /nr:false
+"%MsBuildExe%" MyGetBuild.proj /p:Configuration="%Configuration%" /m /v:M /fl /flp:LogFile=msbuild.log;Verbosity=diag /nr:false
 
 REM Unit Tests
 "%VsTestConsole%" test\Definitions.UnitTests\bin\%Configuration%\Definitions.UnitTests.dll
