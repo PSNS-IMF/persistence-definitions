@@ -17,7 +17,7 @@ if "%nuget%" == "" (
 %WINDIR%\Microsoft.NET\Framework\v4.0.30319\msbuild Definitions.sln /p:Configuration="%config%" /m /v:M /fl /flp:LogFile=msbuild.log;Verbosity=diag /nr:false
 
 REM Unit Tests
-%VsTestConsole% test\Definitions.UnitTests\bin\%config%\Definitions.UnitTests.dll
+"%VsTestConsole%" test\Definitions.UnitTests\bin\%config%\Definitions.UnitTests.dll
 if not "%errorlevel%"=="0" goto failure
 
 mkdir Build
