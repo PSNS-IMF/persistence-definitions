@@ -4,16 +4,19 @@
   <PropertyGroup>
     <SolutionName>Definitions</SolutionName>
     <ProjectName>Psns.Common.Persistence.$(SolutionName)</ProjectName>
-    <AssemblyName>$(ProjectName)</AssemblyName>
     <OutDir>src\$(ProjectName)\bin\$(Configuration)\</OutDir>
-    <AssemblyPath>$(OutDir)$(AssemblyName).dll</AssemblyPath>
-    <XmlDocPath>$(OutDir)$(AssemblyName).xml</XmlDocPath>
+    <AssemblyPath>$(OutDir)$(ProjectName).dll</AssemblyPath>
+    <XmlDocPath>$(OutDir)$(ProjectName).xml</XmlDocPath>
   </PropertyGroup>
 
-  <Target Name="Build" DependsOnTargets="Compile;Deploy" />
+  <Target Name="Build" DependsOnTargets="Compile;Test;Deploy" />
 
   <Target Name="Compile">
     <MSBuild Projects="$(SolutionName).sln" />
+  </Target>
+
+  <Target Name="Test">
+    <Exec Command="&quot;$(VsTestConsole)&quot; test\$(SolutionName).UnitTests\bin\$(Configuration)\$(SolutionName).UnitTests.dll" />
   </Target>
 
   <Target Name="Deploy">
@@ -21,6 +24,6 @@
       <Output TaskParameter="Assemblies" ItemName="AssemblyInfo" />
     </GetAssemblyIdentity>
     <Copy DestinationFolder="Build\lib\net40" SourceFiles="$(AssemblyPath);$(XmlDocPath)" />
-    <Exec Command="$(Nuget) pack src\$(ProjectName)\nuget\$(AssemblyName).nuspec -NoPackageAnalysis -verbosity detailed -p Configuration=$(Configuration) -Version %(AssemblyInfo.Version) -o Build" />
+    <Exec Command="$(Nuget) pack src\$(ProjectName)\nuget\$(ProjectName).nuspec -NoPackageAnalysis -verbosity detailed -p Configuration=$(Configuration) -Version %(AssemblyInfo.Version) -o Build" />
   </Target>
 </Project>
