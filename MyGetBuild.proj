@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build" ToolsVersion="4.0">
+
+  <PropertyGroup>
+    <SolutionName>Definitions</SolutionName>
+    <ProjectName>Psns.Common.Persistence.$(SolutionName)</ProjectName>
+    <AssemblyName>$(ProjectName)</AssemblyName>
+    <OutDir>src\$(ProjectName)\$(Configuration)\bin\</OutDir>
+    <AssemblyPath>$(OutDir)$(AssemblyName).dll</AssemblyPath>
+    <XmlDocPath>$(OutDir)$(AssemblyName).xml</XmlDocPath>
+  </PropertyGroup>
+
+  <Target Name="Build" DependsOnTargets="Compile;Deploy" />
+
+  <Target Name="Compile">
+    <MSBuild Projects="$(SolutionName).sln" />
+  </Target>
+
+  <Target Name="Deploy">
+    <GetAssemblyIdentity AssemblyFiles="$(AssemblyPath)">
+      <Output TaskParameter="Assemblies" ItemName="AssemblyInfo" />
+    </GetAssemblyIdentity>
+    <Copy DestinationFolder="Build\lib\net40" SourceFiles="$(AssemblyPath);$(XmlDocPath)" />
+    <Exec Command="$(Nuget) pack src\$(ProjectName)\nuget\$(AssemblyName).nuspec -NoPackageAnalysis -verbosity detailed -p Configuration=$(Configuration) -Version %(AssemblyInfo.Version) -o Build" />
+  </Target>
+</Project>
