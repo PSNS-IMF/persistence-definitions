@@ -9,7 +9,7 @@ using Moq;
 
 using Ninject;
 
-namespace Definitions.UnitTests
+namespace Definitions.UnitTests.RepositoryFactoryTests
 {
     public class TestClass : IIdentifiable
     {

@@ -34,7 +34,7 @@ namespace Psns.Common.Persistence.Definitions
 
         public int GetHashCode(IIdentifiable obj)
         {
-            return obj.GetHashCode();
+            return obj.Id;
         }
     }
 }
