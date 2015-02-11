@@ -54,7 +54,6 @@
   <ItemGroup>
     <Compile Include="DefinitionsNinjectModule.cs" />
     <Compile Include="IIdentifiable.cs" />
-    <Compile Include="IncludePropertyAttribute.cs" />
     <Compile Include="IRepository.cs" />
     <Compile Include="IRepositoryFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
