@@ -5,7 +5,7 @@
     <SolutionName>Definitions</SolutionName>
     <ProjectName>Psns.Common.Persistence.$(SolutionName)</ProjectName>
     <AssemblyName>$(ProjectName)</AssemblyName>
-    <OutDir>src\$(ProjectName)\$(Configuration)\bin\</OutDir>
+    <OutDir>src\$(ProjectName)\bin\$(Configuration)\</OutDir>
     <AssemblyPath>$(OutDir)$(AssemblyName).dll</AssemblyPath>
     <XmlDocPath>$(OutDir)$(AssemblyName).xml</XmlDocPath>
   </PropertyGroup>
