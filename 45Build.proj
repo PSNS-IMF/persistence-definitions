@@ -8,7 +8,7 @@
     <ProjectGuid>{F32F3C91-CEC9-4605-B928-66C433640C6E}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace Condition=" '$(RootNamespace)' == '' ">$(ProjectName)</RootNamespace>
+    <RootNamespace Condition=" '$(RootNamespace)' == '' ">Psns.Common.Persistence.Definitions</RootNamespace>
     <OutputRootPath>bin\$(Configuration)\net45\</OutputRootPath>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
