@@ -9,7 +9,8 @@
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace Condition=" '$(RootNamespace)' == '' ">Psns.Common.Persistence.Definitions</RootNamespace>
-    <OutputRootPath>bin\$(Configuration)\net45\</OutputRootPath>
+    <AssemblyName>Psns.Common.Persistence.Definitions</AssemblyName>
+    <OutputRootPath>bin\Release\net45\</OutputRootPath>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
