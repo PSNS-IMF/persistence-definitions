@@ -10,7 +10,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace Condition=" '$(RootNamespace)' == '' ">Psns.Common.Persistence.Definitions</RootNamespace>
     <AssemblyName>Psns.Common.Persistence.Definitions</AssemblyName>
-    <OutDir>bin\Release\net45\</OutDir>
+    <OutDir>src\$(RootNamespace)\bin\Release\net45\</OutDir>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
