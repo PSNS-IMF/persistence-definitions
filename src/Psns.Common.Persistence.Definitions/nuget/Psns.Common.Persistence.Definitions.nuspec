@@ -10,6 +10,10 @@
     <projectUrl>https://github.com/PSNS-IMF/persistence-definitions</projectUrl>
     <licenseUrl>https://github.com/PSNS-IMF/persistence-definitions/blob/master/License</licenseUrl>
     <releaseNotes>
+      ## 1.0.3
+      ### Features
+      * Adding .NET 4.5 support
+
       ## 1.0.2
       ### Bug Fixes
       * Fixed IdentifiableComparer.GetHashCode to actually return a valid value.
@@ -21,7 +25,7 @@
     </dependencies>
   </metadata>
   <files>
-    <file src="..\bin\$configuration$\Psns.Common.Persistence.Definitions.dll" target="lib\net40\" />
-    <file src="..\bin\$configuration$\Psns.Common.Persistence.Definitions.xml" target="lib\net40\" />
+    <file src="..\bin\$configuration$\*.*" target="lib\net40\" />
+    <file src="..\bin\$configuration$\net45\*.*" target="lib\net45\" />
   </files>
 </package>
