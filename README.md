@@ -4,4 +4,4 @@ This library provides some basic interfaces for implementing persistence using t
 It also provides a default implementation of IRepositoryFactory that uses the Ninject kernel for service retrieval.
 
 ## CI build status
-[![Build Status](https://www.myget.org/BuildSource/Badge/persistence-definitions?identifier=b44ec753-d7d3-4d7d-8554-1e1fc5eabc1d)](https://www.myget.org/)
+[![Build Status](https://www.myget.org/BuildSource/Badge/psns-common?identifier=fb3806f0-8186-465c-b633-8c2d4336f7b1)](https://www.myget.org/)

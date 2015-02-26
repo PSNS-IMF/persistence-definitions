@@ -8,7 +8,8 @@
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <description>Contains interfaces that define persistence-specific functionality</description>
     <projectUrl>https://github.com/PSNS-IMF/persistence-definitions</projectUrl>
-    <licenseUrl>https://github.com/PSNS-IMF/persistence-definitions/blob/master/License</licenseUrl>
+    <licenseUrl>https://github.com/PSNS-IMF/persistence-definitions/blob/master/LICENSE.md</licenseUrl>
+    <tags>PSNS EntityFramework ORM EF OR/M Database Data</tags>
     <releaseNotes>
       ## 1.0.3
       ### Features
@@ -18,7 +19,6 @@
       ### Bug Fixes
       * Fixed IdentifiableComparer.GetHashCode to actually return a valid value.
     </releaseNotes>
-    <copyright>Copyright 2015</copyright>
     <version>$version$</version>
     <dependencies>
       <dependency id="Ninject" version="3.2.2.0" />
