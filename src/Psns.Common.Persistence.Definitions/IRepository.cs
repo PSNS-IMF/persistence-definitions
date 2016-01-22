@@ -10,7 +10,7 @@ namespace Psns.Common.Persistence.Definitions
     /// Defines a repository that provides access to a collection of type T
     /// </summary>
     /// <typeparam name="T">IIdentifiable class</typeparam>
-    public interface IRepository<T> where T : class, IIdentifiable
+    public interface IRepository<T> : IDisposable where T : class, IIdentifiable
     {
         /// <summary>
         /// Get all entities
