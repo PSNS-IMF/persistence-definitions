@@ -11,6 +11,10 @@
     <licenseUrl>https://github.com/PSNS-IMF/persistence-definitions/blob/master/LICENSE.md</licenseUrl>
     <tags>PSNS EntityFramework ORM EF OR/M Database Data</tags>
     <releaseNotes>
+      ## 1.0.5
+      ### Features
+      * Change NETFramework to 4.5 to support Async operations
+
       ## 1.0.4
       ### Features
       * Make IRepository Disposable

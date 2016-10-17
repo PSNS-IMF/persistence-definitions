@@ -1,8 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
-using System.Text;
+using System.Threading.Tasks;
 
 namespace Psns.Common.Persistence.Definitions
 {
@@ -15,8 +14,8 @@ namespace Psns.Common.Persistence.Definitions
         /// <summary>
         /// Get all entities
         /// </summary>
-        /// <returns>IEnumerable of T</returns>
-        IEnumerable<T> All(params string[] includes);
+        /// <returns>IQueryable of T</returns>
+        IQueryable<T> All(params string[] includes);
 
         /// <summary>
         /// Create a given T
@@ -29,8 +28,8 @@ namespace Psns.Common.Persistence.Definitions
         /// Search for a particular T
         /// </summary>
         /// <param name="predicate">A Linq Expression</param>
-        /// <returns>IEnumerble<typeparamref name="T"/></returns>
-        IEnumerable<T> Find(Expression<Func<T, bool>> predicate, params string[] includes);
+        /// <returns>IQueryable<typeparamref name="T"/></returns>
+        IQueryable<T> Find(Expression<Func<T, bool>> predicate, params string[] includes);
 
         /// <summary>
         /// Search for a T with given primary key values
@@ -38,6 +37,13 @@ namespace Psns.Common.Persistence.Definitions
         /// <param name="keyValues">Primary key values</param>
         /// <returns>A T or null if not found</returns>
         T Find(params object[] keyValues);
+
+        /// <summary>
+        /// Search for a T with given primary key values
+        /// </summary>
+        /// <param name="keyValues">Primary key values</param>
+        /// <returns>A T or null if not found</returns>
+        Task<T> FindAsync(params object[] keyValues);
 
         /// <summary>
         /// Update a given T
@@ -58,5 +64,11 @@ namespace Psns.Common.Persistence.Definitions
         /// </summary>
         /// <returns>The number of changes committed</returns>
         int SaveChanges();
+
+        /// <summary>
+        /// Save all changes made
+        /// </summary>
+        /// <returns>The number of changes committed</returns>
+        Task<int> SaveChangesAsync();
     }
 }

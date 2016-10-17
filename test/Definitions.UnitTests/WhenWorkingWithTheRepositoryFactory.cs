@@ -1,12 +1,7 @@
-﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Psns.Common.Test.BehaviorDrivenDevelopment;
-
 using Psns.Common.Persistence.Definitions;
-
 using Moq;
-
 using Ninject;
 
 namespace Definitions.UnitTests.RepositoryFactoryTests
